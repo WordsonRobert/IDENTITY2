@@ -26,28 +26,16 @@ menu:
       weight: 4
 
 params:
+  env: production
   description: "Official website of the Maths Club of IISER Kolkata."
   author: Maths Club of IISER Kolkata
-  DateFormat: "2 January 2006"
   defaultTheme: light
-  hideFooter: false
   disableThemeToggle: true
-  ShowShareButtons: false
-  ShowReadingTime: false
-  disableSpecial1stPost: false
-  disableAnchoredHeadings: true
-  ShowPostNavLinks: false
-  ShowBreadCrumbs: false
-  ShowCodeCopyButtons: true
-  ShowAllPagesInArchive: false
-  MainSections: ["blog", "talks"]
-  ShowToc: false
-  disableScrollToTop: true
-  TocOpen: true
-  ShowWordCount: false
-  UseHugoToc: true
-  comments: true 
-  math: true
+  
+  homeInfoParams:
+    Title: "Identity"
+    Content: "Welcome to the official website of the Maths Club of IISER Kolkata. We host discussions, articles, and talks on various mathematical concepts."
+
   profileMode:
       enabled: false 
 
@@ -65,13 +53,8 @@ params:
 
   assets:
       disableScrollBarStyle: true
-  cover:
-      hiddenInList: false
-      hiddenInSingle: true
   label:
     text: "Identity"
-    icon: favicon.ico
-    iconHeight: 18
 
 markup:
   goldmark:
@@ -79,8 +62,4 @@ markup:
           unsafe: true
   highlight:
       guessSyntax: true
-      style: autumn 
-  tableOfContents:
-      endLevel: 2
-      ordered: false
-      startLevel: 2
+      style: autumn
