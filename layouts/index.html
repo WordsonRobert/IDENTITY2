@@ -1,0 +1,31 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h2>Latest</h2>
+</header>
+
+{{- $pages := where site.RegularPages "Type" "in" (slice "posts") }}
+{{- range first 3 $pages }}
+<article class="post-entry" style="margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+  <header class="entry-header">
+    <h3 style="margin-bottom: 5px;">{{ .Title }}</h3>
+  </header>
+  {{- if .Params.author }}
+  <div class="entry-meta" style="font-size: 14px; color: var(--secondary); margin-bottom: 15px;">
+    {{ delimit .Params.author ", " }} • {{ .Date.Format "Mon 2 Jan, 2006" }} • {{ delimit .Params.categories ", " }}
+  </div>
+  {{- end }}
+  <div class="entry-content">
+    <p>{{ .Summary }}</p>
+  </div>
+  <footer class="entry-footer" style="margin-top: 15px;">
+    <a href="{{ .Permalink }}" style="color: #0055aa; font-weight: 500;">Read more</a>
+  </footer>
+</article>
+{{- end }}
+
+<div class="post-content" style="margin-top: 40px;">
+  {{ .Content }}
+</div>
+
+{{- end }}
