@@ -1,4 +1,5 @@
 ---
+comments: true
 title: "Breaking the Riemann Integral and The World of Triangular Partitions"
 date: 2023-11-09
 author: ["Rohan Didmishe", "Safarul Rasheed"]
