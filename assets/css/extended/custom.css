@@ -1,0 +1,30 @@
+/* Placeholder Math Background */
+body {
+    background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2000&auto=format&fit=crop'); 
+    background-color: #0f172a; /* Dark blue fallback just in case */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Make the content area look like a floating white page */
+.header, .main, .footer {
+    background-color: #fcfcfc !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Adds a cool shadow around the page */
+}
+
+/* Fix the header so it blends perfectly into the content */
+.header {
+    margin-top: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Fix the footer so it rounds off at the bottom */
+.footer {
+    margin-bottom: 20px;
+    border-radius: 0 0 8px 8px;
+}
